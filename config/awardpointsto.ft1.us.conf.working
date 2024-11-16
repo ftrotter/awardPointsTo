@@ -1,0 +1,10 @@
+<VirtualHost *:80>
+   ServerAdmin webmaster@localhost
+   ServerName awardpointsto.ft1.us
+   DocumentRoot /var/www/awardPointsTo/public
+   ErrorLog ${APACHE_LOG_DIR}/error.log
+   CustomLog ${APACHE_LOG_DIR}/access.log combined
+RewriteEngine on
+RewriteCond %{SERVER_NAME} =awardpointsto.ft1.us
+RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+</VirtualHost>
