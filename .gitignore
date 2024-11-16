@@ -1,3 +1,41 @@
+
+#CareSet defaults
+*.yaml
+notgit/
+config.php
+
+#ignore log files
+/log/*.txt
+/log/*.log
+/log/*.sql
+
+#cruft blocks
+.DS_Store
+Thumbs.db
+.cache
+.project
+.settings
+.tmproj
+*.esproj
+nbproject
+.php_cs.cache
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*.csv
+*~
+*.sass-cache
+*.php_cs.cache
+
+# Laravel 11 defaults
+
 /.phpunit.cache
 /node_modules
 /public/build
@@ -20,3 +58,24 @@ yarn-error.log
 /.idea
 /.vscode
 /.zed
+
+#ignore vagrant
+.vagrant/
+
+#ignore local data files
+*.data
+data/*
+data
+
+#json auth files like from google.
+*.auth.json
+*.token.json
+
+# ignore compiled python files
+*.pyc 
+
+# Lots of different keys and credential files...
+# Lets exclude them all
+*.auth.*
+
+

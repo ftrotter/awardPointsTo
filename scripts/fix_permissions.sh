@@ -12,6 +12,8 @@ echo "change the ownership of the storage directory to be writeable by apache"
 chown www-data:careset storage -R
 chown www-data:careset bootstrap/cache/
 chown www-data:careset log -R
+chmod g+rw storage -R
+chmod o+rw storage -R
 
 echo "change the ownership of the sql_backup dir"
 chown mysql:careset sql_backup
