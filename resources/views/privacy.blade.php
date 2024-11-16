@@ -5,20 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="/public/livelink/css/livelink.css"/>
 
     <meta name="robots" content="noindex" />
 
     <meta property="og:title" content="Privacy Policy for Award Points To - TermsFeed" />
-    <meta property="og:image" content="https://www.termsfeed.com/public/images/meta_og_image_livelink.png" />
-    <meta property="og:image:width" content="1280" />
-    <meta property="og:image:height" content="720" />
     
-    <meta property="og:url" content="https://www.termsfeed.com/live/d0371fa7-424a-4882-a45d-f353bfeb48c7" />
-    <meta property="og:site_name" content="TermsFeed" />
-
-    <link rel="canonical" href="https://www.termsfeed.com/live/d0371fa7-424a-4882-a45d-f353bfeb48c7" />
-
     
     
     
