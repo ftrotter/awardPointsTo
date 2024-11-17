@@ -8,7 +8,7 @@ class PointTransaction extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['points', 'reason', 'team_member_id', 'house_team_id'];
+    protected $fillable = ['points', 'reason', 'houseteam_member_id', 'houseteam_id'];
 
     public function teamMember()
     {
@@ -17,7 +17,6 @@ class PointTransaction extends Model
 
     public function houseTeam()
     {
-        return $this->belongsTo(HouseTeam::class);
+        return $this->belongsTo(HouseTeam::class, 'houseteam_id');
     }
 }
-

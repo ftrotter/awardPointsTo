@@ -4,7 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class HouseTeam extends Model
+class Houseteam extends Model
 {
     use HasFactory;
 
@@ -19,7 +19,7 @@ class HouseTeam extends Model
 
     public function houseteamMembers()
     {
-        return $this->belongsToMany(HouseteamMember::class, 'houseteam_houseteam_member')->withTimestamps();
+        return $this->belongsToMany(HouseteamMember::class, 'houseteam_houseteam_member', 'houseteam_id', 'houseteam_member_id')->withTimestamps();
     }
 
     public function pointTransactions()

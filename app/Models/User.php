@@ -14,7 +14,6 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     use HasApiTokens;
-
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory;
     use HasProfilePhoto;
@@ -22,16 +21,15 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
+    public function houseteams()
+    {
+        return $this->hasMany(Houseteam::class);
+    }
 
-public function houseTeams()
-{
-    return $this->hasMany(HouseTeam::class);
-}
-
-
-
-
-
+    public function houseteamMembers()
+    {
+        return $this->hasMany(HouseteamMember::class);
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -42,7 +40,7 @@ public function houseTeams()
         'name',
         'email',
         'password',
-    	'google_id',
+        'google_id',
     ];
 
     /**
