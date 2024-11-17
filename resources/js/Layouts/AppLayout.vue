@@ -107,7 +107,7 @@ const logout = () => {
                                     </button>
 
                                     <button v-else type="button" class="btn btn-light dropdown-toggle d-flex align-items-center">
-                                        {{ $page.props.auth.user.name }}
+                                        {{ $page.props.auth.user.name }} ({{ $page.props.auth.user.email }})
                                     </button>
                                 </template>
 
