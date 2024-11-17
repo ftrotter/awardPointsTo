@@ -3,6 +3,10 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\Auth\SocialiteController;
+
+Route::get('/login/google', [SocialiteController::class, 'redirectToGoogle'])->name('login.google');
+Route::get('/callback/google', [SocialiteController::class, 'handleGoogleCallback']);
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [

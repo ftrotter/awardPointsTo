@@ -86,5 +86,19 @@ const submit = () => {
                 </PrimaryButton>
             </div>
         </form>
+    <a :href="route('login.google')" class="btn btn-primary">
+      Login with Google
+    </a>
     </AuthenticationCard>
+
+<script>
+export default {
+  methods: {
+    route(name) {
+      return route(name); // Laravel's route helper is available via Ziggy
+    },
+  },
+};
+</script>
+
 </template>

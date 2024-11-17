@@ -18,4 +18,7 @@
     <body class="font-sans antialiased">
         @inertia
     </body>
+<script>
+  @routes
+</script>
 </html>
