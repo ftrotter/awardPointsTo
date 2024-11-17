@@ -1,0 +1,41 @@
+I would like to create a new API using the OpenAPI/Swagger specification. 
+The API will be implemented using Laravel Sanctum and the Laravel Jetstream package.
+
+The API will be used to track the basic data around a "house" point system. There should be an API call to: 
+
+* CRUD for a house or team (in fact, call them houseTeam from now on!)
+* Get a list of all houseTeams for a given user
+* CRUD for "teamMember" that are associated with a given houseTeam
+* Get a list of all teamMembers for a given houseTeam
+* Get a list of all houseTeams for a given teamMember
+* Keep a score for each houseTeam, that can have both negative and positive points added on, associated with an action by a teamMember
+
+A typical user story for the API is as follows: 
+* A user signs up for an account under the email john.smith@example.com
+* The user gets their Sanctum API key from the Jetstream dashboard
+* The user calls the API to create a houseTeam called "Blue Team", "Red Team", "Orange Team" and "Sniffle House"
+* The user calls the API to add 20 points to Blue Team because "Debbie Derkins" (who will be added automatically to "Blue Team" as a teamMember) has earned 20 points for Blue Team.
+* The user calls the API to add 10 points to Red Team because "Debbie Derkins" (who will be added automatically to "Red Team" as a teamMember) has earned 10 points for Red Team.
+* The user calls the API to add -30 points to Sniffle House because "Debbie Derkins" (who will be added automatically to "Red Team" as a teamMember) has earned -30 points for Sniffle House.
+* The user calls the API to add 20 points to Red Team because "Jenny Jones" (who will be added automatically to "Red Team" as a teamMember) has earned 20 points for Red Team.
+* The user calls the API to get the list of all houseTeams and gets back the fact that: 
+    * "Blue Team" has 20 points
+    * "Red Team" has 20 points
+    * "Orange Team" has 0 points
+    * "Sniffle House" has -30 points
+* The user calls the API to get the list of all teamMembers
+    * "Debbie Derkins" has earned
+        * 20 points for Blue Team
+        * 20 points for Red Team
+        * 0 points for Orange Team
+        * -30 points for Sniffle House
+        * Has a total of 10 points earned
+    * "Jenny Jones" has earned
+        * 0 points for Blue Team
+        * 20 points for Red Team
+        * 0 points for Orange Team
+        * 0 points for Sniffle House
+        * Has a total of 20 points earned
+
+I would like to use the Laravel Sanctum package for authentication and authorization.
+
