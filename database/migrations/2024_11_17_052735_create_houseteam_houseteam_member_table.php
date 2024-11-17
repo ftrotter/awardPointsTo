@@ -8,21 +8,19 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('point_transactions', function (Blueprint $table) {
+        Schema::create('houseteam_houseteam_member', function (Blueprint $table) {
             $table->id();
-            $table->integer('points');
-            $table->string('reason')->nullable();
-            $table->foreignId('houseteam_member_id');
             $table->foreignId('houseteam_id');
+            $table->foreignId('houseteam_member_id');
             $table->timestamps();
 
-            $table->foreign('houseteam_member_id')->references('id')->on('houseteam_members')->onDelete('cascade');
             $table->foreign('houseteam_id')->references('id')->on('houseteams')->onDelete('cascade');
+            $table->foreign('houseteam_member_id')->references('id')->on('houseteam_members')->onDelete('cascade');
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('point_transactions');
+        Schema::dropIfExists('houseteam_houseteam_member');
     }
 };
