@@ -1,11 +1,19 @@
 <template>
-    <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
+    <div class="min-vh-100 d-flex flex-column align-items-center justify-content-center py-4 bg-light">
         <div>
             <slot name="logo" />
         </div>
 
-        <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
-            <slot />
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card shadow-sm mt-4">
+                        <div class="card-body">
+                            <slot />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
